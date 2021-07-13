@@ -11,8 +11,10 @@ body {
 div{
     display: flex;
 }
-
-canvas {
+canvas{
     position: absolute;
-    top: 0;
+}
+.particles-js-canvas-el {
+    top: 0; left: 0;
+    background: radial-gradient(rgb(0, 0, 0), rgba(28, 42, 56, 0.5));
 }
