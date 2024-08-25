@@ -1,11 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: 'MoreSugar';
+    src: url('more-sugar.thin.ttf') format('truetype'); /* Adjust the path and format accordingly */
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-    overflow: hidden;
+    overflow: x;
     background: black;
+    font-family: 'MoreSugar', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 div{
@@ -17,4 +22,51 @@ canvas{
 .particles-js-canvas-el {
     top: 0; left: 0;
     background: radial-gradient(rgb(0, 0, 0), rgba(28, 42, 56, 0.5));
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar {
+    justify-content: center;
+    border-bottom: 5px solid #dddddd;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: x-large;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 10px 0;
+    border-bottom: 1px dashed #dddddd33;
+}
+
+section p {
+    font-size: larger;
+}
+
+.section {
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
 }
