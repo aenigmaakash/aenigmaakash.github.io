@@ -7,82 +7,89 @@
     <title>sweet-sweet-home</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="backgroundCanvas">
-        <canvas id="myCanvas" style="z-index: 30;"></canvas>
+    <!-- Background container positioned first in DOM -->
+    <div id="backgroundCanvas" class="background-container">
+        <canvas id="myCanvas"></canvas>
     </div>
-    <div style="position: absolute; color: #fff; width: 100%; height: 100%; text-align: center; align-content: center; display: flex; flex-direction: column;">
+    
+    <!-- Sticky navbar -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo-link" title="Home">
+                <div class="logo">
+                    <img src="favicon.ico" alt="Logo" class="logo-img">
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">yes?</a></li>
+                    <li><a href="#stuff" class="nav-link">polymath-in-progress</a></li>
+                    <li><a href="https://github.com/aenigmaakash" class="nav-link">what-i-do</a></li>
+                    <li><a href="mailto:ping@aenig.in" class="nav-link">ping-me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main content -->
+    <div class="page-content">
         <div class="container">
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li><a href="#about">yes?</a></li>
-                        <li><a href="#stuff">polymath-in-progress</a></li>
-                        <li><a href="https://github.com/aenigmaakash">what-i-do</a></li>
-                        <li><a href="mailto:ping@aenig.in">ping-me</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <section id="about">
-                <div class="section">
-                    <p>Started my Google quest early on — now I'm a search wizard!</p>
+            <section id="hero" class="hero-section">
+                <div class="typing-container">
+                    <span id="text-effect"></span><span class="cursor"></span>
                 </div>
             </section>
+
+            <section id="about">
+                <div class="section">
+                    <h2 class="section-title">About Me</h2>
+                    <p>Started my Google quest early on — now I'm a search wizard!</p>
+                    <p>I'm a tech enthusiast who loves making complex systems work together. When I'm not at my day job as a data engineer, you'll find me tinkering with home networks, IoT devices, and single-board computers like Raspberry Pi and ESP32. <i class="fas fa-microchip"></i></p>
+                    <p>I find joy in exploring cloud networking solutions and building systems that bridge the gap between cutting-edge technology and practical applications. I'm the person friends call when they need someone to explain tech in a way that actually makes sense. <i class="fas fa-wifi"></i></p>
+                </div>
+            </section>
+            
             <section id="stuff">
+                <h2 class="section-title">My Expertise</h2>
+                
                 <div class="accordion">
-                    <div class="accordion-header">
-                        Summary
+                    <div class="accordion-header active">
+                        <span>TL;DR - What I Actually Do <i class="fas fa-magic"></i></span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content active">
                         <ul>
-                            <li>Experience in various Big Data tools like PySpark, Hive, and HBase.</li>
-                            <li>Worked on Glue, EMR, and Athena for Big Data on cloud in AWS.</li>
-                            <li>Migrated data, schema, and constraints from on-premise PostgreSQL to AWS RDS -
-                                PostgreSQL using AWS Data Migration Service.</li>
-                            <li>Design, development, automation, and deployment of integrated solutions for cloud and
-                                on-premise scenarios.</li>
-                            <li>Implemented Metadata-driven automation solutions that are scalable on cloud.</li>
-                            <li>Created and executed workflows using Apache Airflow orchestration, automating tasks for
-                                historical and incremental data loading.</li>
-                            <li>Experience in implementing data warehouse applications, including extraction,
-                                transformation, and loading processes using cloud-based ETL tools.</li>
-                            <li>Knowledge in integrating various data sources like PostgreSQL, S3, SQL Server, Glue
-                                Datastore, Hive, Excel, and flat files into staging areas.</li>
-                            <li>Good knowledge of data warehousing concepts like Star schema, Snowflake schema,
-                                Dimension tables, and Fact tables.</li>
-                            <li>Worked on PowerBI to create interactive dashboards using self-hosted datasets.</li>
-                            <li>Experience in Headless BI applications using DBT with Python.</li>
-                            <li>Proficiency in data warehousing techniques like data cleansing, slowly changing
-                                dimension phenomenon, surrogate key assignment, and change data capture.</li>
-                            <li>Good understanding of ETL and best practices, including slowly changing dimensions (SCD1
-                                and SCD2).</li>
-                            <li>Created mappings using various transformations like source qualifier, joiner,
-                                aggregator, expression, filter, router, update strategy, and lookup.</li>
-                            <li>Knowledge in designing ER models for various datasets using Oracle SQL Data Modeling.
-                            </li>
-                            <li>Knowledge in architecting relational databases and implementing various schema patterns.
-                            </li>
-                            <li>Experience in developing REST APIs that scale to handle a large number of concurrent
-                                connections.</li>
-                            <li>Used tools like AWS Lambda to create API webhooks for various frontend applications.
-                            </li>
-                            <li>Experience in creating industrial-scale API servers using .NET MVC and basic
-                                Vue.js-based websites in HTML and JavaScript to demonstrate the APIs.</li>
-                            <li>Worked on Android Studio and app development that consumed REST APIs.</li>
+                            <li><i class="fas fa-database"></i> I work with large-scale data using PySpark, Hive, and HBase.</li>
+                            <li><i class="fab fa-aws"></i> I'm experienced with AWS services like Glue, EMR, and Athena.</li>
+                            <li><i class="fas fa-truck-moving"></i> I've migrated databases from on-premise to AWS cloud environments.</li>
+                            <li><i class="fas fa-tools"></i> I build automation solutions that work in both cloud and on-premise scenarios.</li>
+                            <li><i class="fas fa-robot"></i> I've created metadata-driven automation solutions that simplify complex workflows.</li>
+                            <li><i class="fas fa-wind"></i> I have experience orchestrating data workflows with Apache Airflow.</li>
+                            <li><i class="fas fa-warehouse"></i> I've developed ETL applications for various data warehouse implementations.</li>
+                            <li><i class="fas fa-puzzle-piece"></i> I integrate data from PostgreSQL, S3, SQL Server, Glue, Hive, and other sources.</li>
+                            <li><i class="fas fa-star"></i> I'm knowledgeable in Star schema, Snowflake schema, and dimensional modeling.</li>
+                            <li><i class="fas fa-chart-bar"></i> I've created PowerBI dashboards to visualize complex data.</li>
+                            <li><i class="fas fa-ghost"></i> I've built headless BI applications using DBT with Python.</li>
+                            <li><i class="fas fa-broom"></i> I handle data cleansing, slowly changing dimensions, and change data capture processes.</li>
+                            <li><i class="fas fa-drafting-compass"></i> I design ER models and data architectures for various applications.</li>
+                            <li><i class="fas fa-server"></i> I've built scalable REST APIs for various applications.</li>
+                            <li><i class="fas fa-rocket"></i> I've developed applications with .NET MVC and Vue.js.</li>
+                            <li><i class="fab fa-android"></i> I've created Android applications for various purposes.</li>
                         </ul>
-
                     </div>
-
                 </div>
                 <div class="accordion">
                     <div class="accordion-header">
-                        Skills
+                        <span>Skills & Technologies <i class="fas fa-bolt"></i></span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="skills-grid">
                             <div>
-                                <h4>Programming Skills</h4>
+                                <h4><i class="fas fa-code"></i> Languages</h4>
                                 <ul>
                                     <li>SQL - ANSI SQL & PSQL</li>
                                     <li>Python</li>
@@ -92,7 +99,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4>Big Data Tools</h4>
+                                <h4><i class="fas fa-mountain"></i> Big Data</h4>
                                 <ul>
                                     <li>Spark (Python)</li>
                                     <li>Hive</li>
@@ -100,7 +107,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4>AWS</h5>
+                                <h4><i class="fab fa-aws"></i> AWS</h4>
                                 <ul>
                                     <li>Glue</li>
                                     <li>Data Migration Service</li>
@@ -115,7 +122,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4>Database Management Systems (DBMS)</h4>
+                                <h4><i class="fas fa-database"></i> Databases</h4>
                                 <ul>
                                     <li>PostgreSQL</li>
                                     <li>SQL Server</li>
@@ -124,14 +131,14 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4>Business Intelligence (BI) Tools</h4>
+                                <h4><i class="fas fa-chart-pie"></i> Business Intelligence</h4>
                                 <ul>
                                     <li>PowerBI</li>
                                     <li>DBT</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4>Azure</h5>
+                                <h4><i class="fab fa-microsoft"></i> Azure</h4>
                                 <ul>
                                     <li>Data Factory</li>
                                     <li>Data Flow</li>
@@ -143,38 +150,98 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4>GCP</h5>
+                                <h4><i class="fab fa-google"></i> GCP</h4>
                                 <ul>
                                     <li>BigQuery</li>
                                     <li>Cloud Storage</li>
                                 </ul>
                             </div>
+                            <div>
+                                <h4><i class="fas fa-cogs"></i> IoT & Hardware</h4>
+                                <ul>
+                                    <li>Raspberry Pi</li>
+                                    <li>ESP32</li>
+                                    <li>Home Automation</li>
+                                    <li>Networking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Project Highlights <i class="fas fa-flask"></i></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="project-cards">
+                            <div class="project-card">
+                                <h4><i class="fas fa-hospital"></i> Healthcare Data Migration</h4>
+                                <p>Migrated healthcare data from Azure B2C to PostgreSQL while maintaining data integrity and security compliance.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-school"></i> Education Foundation Data Lake</h4>
+                                <p>Built a data lake for a major foundation that consolidated university and healthcare statistics, transforming unstructured data into actionable insights.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-shopping-cart"></i> Retail Finance Automation</h4>
+                                <p>Created metadata ETL pipelines for multiple finance teams at a major retailer, streamlining Excel data into Tableau visualizations.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-robot"></i> Metadata-driven Automation</h4>
+                                <p>Built an in-house solution that automates data engineering workflows using metadata, significantly reducing manual configuration.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-school"></i> Educational Data Standardization</h4>
+                                <p>Created metadata-driven ETL for educational data systems, transforming CSVs into standardized nested JSON structures.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-film"></i> Media Inventory Analytics</h4>
+                                <p>Built an analytics platform for a media inventory database with dimensional modeling and historical tracking.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-shopping-basket"></i> Local Produce E-commerce</h4>
+                                <p>Developed an API for an e-commerce platform enabling local fresh produce ordering and delivery.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-shield-alt"></i> Security Patrol Monitoring</h4>
+                                <p>Built a Progressive Web App that interfaces with IoT devices to monitor security patrol activities.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-bluetooth"></i> Ozone Generator Control</h4>
+                                <p>Created an Android app to control an ozone-generating device via Bluetooth for sanitization applications.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-trash"></i> 3D Waste Volume Estimation</h4>
+                                <p>Developed an image processing system that estimates garbage volume from photographic data for waste management optimization.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-network-wired"></i> Smart Home Integration</h4>
+                                <p>Built a custom smart home system integrating various IoT devices and services with centralized control.</p>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-server"></i> Home Network Management</h4>
+                                <p>Configured and optimized a comprehensive home network with VLANs, VPN, and content filtering.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <footer>
+                <div class="social-links">
+                    <a href="https://github.com/aenigmaakash" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ping@aenig.in"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/aenigmaakash" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </footer>
         </div>
     </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- <script type="text/javascript" src="aenig.js"></script> -->
-    <!-- <script src="text-anim.js"></script> -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="background.js"></script>
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-
-                // Toggle active class
-                header.classList.toggle('active');
-
-                // Toggle accordion content visibility
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
