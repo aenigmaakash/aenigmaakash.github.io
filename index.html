@@ -39,16 +39,19 @@
         <div class="container">
             <section id="hero" class="hero-section">
                 <div class="typing-container">
-                    <span id="text-effect"></span><span class="cursor"></span>
+                    <span id="text-effect"></span>
                 </div>
             </section>
 
             <section id="about">
-                <div class="section">
-                    <h2 class="section-title">About Me</h2>
-                    <p>Started my Google quest early on — now I'm a search wizard!</p>
-                    <p>I'm a tech enthusiast who loves making complex systems work together. When I'm not at my day job as a data engineer, you'll find me tinkering with home networks, IoT devices, and single-board computers like Raspberry Pi and ESP32. <i class="fas fa-microchip"></i></p>
-                    <p>I find joy in exploring cloud networking solutions and building systems that bridge the gap between cutting-edge technology and practical applications. I'm the person friends call when they need someone to explain tech in a way that actually makes sense. <i class="fas fa-wifi"></i></p>
+                <h2 class="section-title">About Me</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-content static-content">
+                        <p>Started my Google quest early on — now I'm a search wizard!</p>
+                        <p>I'm a tech enthusiast who loves making complex systems work together. When I'm not at my day job as a data engineer, you'll find me tinkering with home networks, IoT devices, and single-board computers like Raspberry Pi and ESP32. <i class="fas fa-microchip"></i></p>
+                        <p>I find joy in exploring cloud networking solutions and building systems that bridge the gap between cutting-edge technology and practical applications. I'm the person friends call when they need someone to explain tech in a way that actually makes sense. <i class="fas fa-wifi"></i></p>
+                    </div>
                 </div>
             </section>
             
@@ -56,28 +59,28 @@
                 <h2 class="section-title">My Expertise</h2>
                 
                 <div class="accordion">
-                    <div class="accordion-header active">
+                    <div class="accordion-header">
                         <span>TL;DR - What I Actually Do <i class="fas fa-magic"></i></span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="accordion-content active">
+                    <div class="accordion-content">
                         <ul>
-                            <li><i class="fas fa-database"></i> I work with large-scale data using PySpark, Hive, and HBase.</li>
-                            <li><i class="fab fa-aws"></i> I'm experienced with AWS services like Glue, EMR, and Athena.</li>
-                            <li><i class="fas fa-truck-moving"></i> I've migrated databases from on-premise to AWS cloud environments.</li>
-                            <li><i class="fas fa-tools"></i> I build automation solutions that work in both cloud and on-premise scenarios.</li>
-                            <li><i class="fas fa-robot"></i> I've created metadata-driven automation solutions that simplify complex workflows.</li>
-                            <li><i class="fas fa-wind"></i> I have experience orchestrating data workflows with Apache Airflow.</li>
-                            <li><i class="fas fa-warehouse"></i> I've developed ETL applications for various data warehouse implementations.</li>
-                            <li><i class="fas fa-puzzle-piece"></i> I integrate data from PostgreSQL, S3, SQL Server, Glue, Hive, and other sources.</li>
-                            <li><i class="fas fa-star"></i> I'm knowledgeable in Star schema, Snowflake schema, and dimensional modeling.</li>
-                            <li><i class="fas fa-chart-bar"></i> I've created PowerBI dashboards to visualize complex data.</li>
-                            <li><i class="fas fa-ghost"></i> I've built headless BI applications using DBT with Python.</li>
-                            <li><i class="fas fa-broom"></i> I handle data cleansing, slowly changing dimensions, and change data capture processes.</li>
-                            <li><i class="fas fa-drafting-compass"></i> I design ER models and data architectures for various applications.</li>
-                            <li><i class="fas fa-server"></i> I've built scalable REST APIs for various applications.</li>
-                            <li><i class="fas fa-rocket"></i> I've developed applications with .NET MVC and Vue.js.</li>
-                            <li><i class="fab fa-android"></i> I've created Android applications for various purposes.</li>
+                            <li><i class="fas fa-database"></i> Large-scale data wrangling with PySpark, Hive, and HBase.</li>
+                            <li><i class="fab fa-aws"></i> AWS expertise across Glue, EMR, Athena, and more.</li>
+                            <li><i class="fas fa-truck-moving"></i> Database migration from on-premise to AWS cloud environments.</li>
+                            <li><i class="fas fa-tools"></i> Automation solutions built for both cloud and on-premise scenarios.</li>
+                            <li><i class="fas fa-robot"></i> Metadata-driven automation systems that simplify complex workflows.</li>
+                            <li><i class="fas fa-wind"></i> Data workflow orchestration with Apache Airflow.</li>
+                            <li><i class="fas fa-warehouse"></i> ETL applications developed for various data warehouse implementations.</li>
+                            <li><i class="fas fa-puzzle-piece"></i> Data integration from PostgreSQL, S3, SQL Server, Glue, Hive, and beyond.</li>
+                            <li><i class="fas fa-star"></i> Expertise in Star schema, Snowflake schema, and dimensional modeling.</li>
+                            <li><i class="fas fa-chart-bar"></i> PowerBI dashboards crafted to visualize complex data.</li>
+                            <li><i class="fas fa-ghost"></i> Headless BI applications built using DBT with Python.</li>
+                            <li><i class="fas fa-broom"></i> Data cleansing, slowly changing dimensions, and change data capture processes managed.</li>
+                            <li><i class="fas fa-drafting-compass"></i> ER models and data architectures designed for various applications.</li>
+                            <li><i class="fas fa-server"></i> Scalable REST APIs constructed for diverse applications.</li>
+                            <li><i class="fas fa-rocket"></i> Applications developed with .NET MVC and Vue.js.</li>
+                            <li><i class="fab fa-android"></i> Android applications created for various purposes.</li>
                         </ul>
                     </div>
                 </div>
@@ -91,69 +94,61 @@
                             <div>
                                 <h4><i class="fas fa-code"></i> Languages</h4>
                                 <ul>
-                                    <li>SQL - ANSI SQL & PSQL</li>
                                     <li>Python</li>
+                                    <li>SQL (ANSI SQL & PSQL)</li>
                                     <li>C#</li>
                                     <li>ASP .NET</li>
                                     <li>Kotlin</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4><i class="fas fa-mountain"></i> Big Data</h4>
+                                <h4><i class="fas fa-database"></i> Data Storage</h4>
+                                <ul>
+                                    <li>PostgreSQL</li>
+                                    <li>SQL Server</li>
+                                    <li>HBase</li>
+                                    <li>Data Modeling</li>
+                                    <li>Hive</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="fas fa-mountain"></i> Big Data & BI</h4>
                                 <ul>
                                     <li>Spark (Python)</li>
-                                    <li>Hive</li>
-                                    <li>HBase</li>
+                                    <li>PowerBI</li>
+                                    <li>DBT</li>
+                                    <li>Dimensional Modeling</li>
+                                    <li>ETL/ELT Pipelines</li>
                                 </ul>
                             </div>
                             <div>
                                 <h4><i class="fab fa-aws"></i> AWS</h4>
                                 <ul>
-                                    <li>Glue</li>
-                                    <li>Data Migration Service</li>
-                                    <li>RDS - PostgreSQL</li>
-                                    <li>Athena</li>
-                                    <li>Redshift</li>
-                                    <li>EMR</li>
-                                    <li>S3</li>
-                                    <li>Lambda</li>
-                                    <li>API Gateway</li>
-                                    <li>Elastic Container Registry</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4><i class="fas fa-database"></i> Databases</h4>
-                                <ul>
-                                    <li>PostgreSQL</li>
-                                    <li>SQL Server</li>
-                                    <li>Oracle SQL Data Modeling</li>
-                                    <li>Database Design</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4><i class="fas fa-chart-pie"></i> Business Intelligence</h4>
-                                <ul>
-                                    <li>PowerBI</li>
-                                    <li>DBT</li>
+                                    <li>Glue & Data Migration</li>
+                                    <li>RDS & Redshift</li>
+                                    <li>S3 & Athena</li>
+                                    <li>Lambda & API Gateway</li>
+                                    <li>EMR & ECR</li>
                                 </ul>
                             </div>
                             <div>
                                 <h4><i class="fab fa-microsoft"></i> Azure</h4>
                                 <ul>
-                                    <li>Data Factory</li>
-                                    <li>Data Flow</li>
-                                    <li>PostgreSQL</li>
-                                    <li>Data Storage</li>
+                                    <li>Data Factory & Flow</li>
+                                    <li>PostgreSQL & Storage</li>
                                     <li>Functions</li>
                                     <li>Power BI</li>
                                     <li>App Service</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4><i class="fab fa-google"></i> GCP</h4>
+                                <h4><i class="fab fa-google"></i> Cloud & Automation</h4>
                                 <ul>
-                                    <li>BigQuery</li>
-                                    <li>Cloud Storage</li>
+                                    <li>GCP (BigQuery, Storage)</li>
+                                    <li>Kubernetes & Docker</li>
+                                    <li>CI/CD Pipelines</li>
+                                    <li>Airflow</li>
+                                    <li>Great Expectations</li>
                                 </ul>
                             </div>
                             <div>
@@ -162,7 +157,18 @@
                                     <li>Raspberry Pi</li>
                                     <li>ESP32</li>
                                     <li>Home Automation</li>
-                                    <li>Networking</li>
+                                    <li>Network Design</li>
+                                    <li>Bluetooth Applications</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><i class="fas fa-tools"></i> Development Tools</h4>
+                                <ul>
+                                    <li>Git & Version Control</li>
+                                    <li>Selenium</li>
+                                    <li>REST API Design</li>
+                                    <li>Android Studio</li>
+                                    <li>Vue.js</li>
                                 </ul>
                             </div>
                         </div>
@@ -232,14 +238,13 @@
                 <div class="social-links">
                     <a href="https://github.com/aenigmaakash" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="mailto:ping@aenig.in"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/aenigmaakash" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/akashjena98" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </footer>
         </div>
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="background.js"></script>
     <script src="main.js"></script>

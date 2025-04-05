@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true,
         delay: 50,
         deleteSpeed: 30,
+        cursor: '|'
     });
     
     typewriter
